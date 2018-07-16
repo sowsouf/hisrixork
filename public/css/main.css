@@ -1,0 +1,104 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/*input,*/
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.form-control:focus {
+    border-color: #ced4da;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/*
+ *
+ * FORM LOAD
+ *
+ */
+
+#form-load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 1;
+}
+
+#form-load .loader-container {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid rgba(0, 0, 0, .1);
+}
+
+#form-load .loader-container:after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-top-color: #7EC5C2;
+    -webkit-animation: rotate 1s linear infinite;
+    -o-animation: rotate 1s linear infinite;
+    animation: rotate 1s linear infinite;
+}
+
+#form-load .loader-container .my-fa-loader {
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 3.2em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.my-fa-loader:before {
+    content: '';
+    position: absolute;
+    top: 53%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2px;
+    height: 3px;
+    font-size: 10px;
+    background: #ffffff;
+}
+
+.light {
+    -webkit-text-stroke: 4px white;
+}
+
+.expand-icon:after {
+    content: "\f023";
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
